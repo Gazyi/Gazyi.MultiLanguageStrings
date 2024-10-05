@@ -34,4 +34,5 @@ This mod uses JSON translation tables that are located in: `<Path to Titanfall 2
 
 ##### Global functions:
 `string function ServerLocalizeTokenForClient( entity player, string szToken, string modName )` - Returns translated string for mod token, if it exists. If there's no translation for client language, fallbacks to English.
-`void function ServerAddTranslationsForToken( string szToken, LocalizedStringStruct localizedStruct, string modName, bool bForceSaveTranslation = false )` - Adds translation for specified token in runtime. Saves current translation table if there's no file for mod or `bForceSaveTranslation` is set to `true`.
+
+`void function ServerAddTranslationsForToken( string szToken, LocalizedStringStruct localizedStruct, string modName, bool bForceSaveTranslation = false )` - Adds translation for specified token in runtime. Saves current translation table if there's no file for mod or "bForceSaveTranslation" is set to "true".
