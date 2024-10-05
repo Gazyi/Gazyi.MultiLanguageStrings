@@ -1,0 +1,34 @@
+{
+    "Name": "Gazyi.MultiLanguageStrings",
+    "Description": "Localization interface for custom server-side messages.",
+    "Version": "1.0.0",
+    "LoadPriority": 1,
+    "ConVars": 
+    [
+        {
+            "Name": "cl_mls_serverlang",
+            "DefaultValue": "english",
+            "HelpString": "Dummy ConVar that exposes cl_language to servers.",
+            "Flags": "USERINFO"
+        }
+    ],
+    "Scripts": 
+    [
+        {
+            "Path": "client/cl_translations_init.nut",
+            "RunOn": "CLIENT && MP",
+            "ClientCallback":
+            {
+                "After": "ClientTranslantionsInit"
+            }
+        },
+        {
+            "Path": "_translations.gnut",
+            "RunOn": "SERVER && MP",
+            "ServerCallback":
+            {
+                "After": "ServerTranslantionsInit"
+            }
+        }
+    ]
+}
