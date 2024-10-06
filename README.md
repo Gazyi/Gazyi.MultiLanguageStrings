@@ -4,7 +4,8 @@ Northstar mod that adds localization interface for custom server-side messages.
 ## Using this mod
 ### Clients
 Clients need this mod only if their game language is not English.
-Unlike in other Portal 2 branch Source games, ConVar `cl_language` is not flagged as "USERINFO". This mod creates "USERINFO"-flagged ConVar `cl_mls_serverlang` that copies value of `cl_language`, so servers can receive its value. 
+Unlike in other Portal 2 branch Source games, ConVar `cl_language` is not flagged as "USERINFO". This mod creates "USERINFO"-flagged ConVar `cl_mls_serverlang` that copies value of `cl_language`, so servers can receive its value.
+
 If Northstar adds `FCVAR_USERINFO` flag to `cl_language` ConVar, this requirement will be removed.
 
 ### Servers and Modders
