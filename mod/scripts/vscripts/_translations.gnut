@@ -62,17 +62,19 @@ void function ServerTranslantionsInit()
 
 void function ServerInitModTranslations()
 {
-    foreach ( string modName in NSGetModNames() )
-    {
-        if ( NSIsModEnabled( modName ) )
+    array<ModInfo> mods = NSGetModsInformation()
+    
+    foreach ( ModInfo mod in mods )
+    {        
+        if ( mod.enabled )
         {
             // Try to load translations
-            if ( NSDoesFileExist( modName + ".json" ) )
+            if ( NSDoesFileExist( mod.name + ".json" ) )
             {
                 #if DEV
-                printt( "[MultiLanguageStrings] Loading translation table for mod:" + modName )
+                printt( "[MultiLanguageStrings] Loading translation table for mod:" + mod.name )
                 #endif
-                NSLoadJSONFile( modName + ".json", LoadModTranslationTable )
+                NSLoadJSONFile( mod.name + ".json", LoadModTranslationTable )
             }
         }
     }

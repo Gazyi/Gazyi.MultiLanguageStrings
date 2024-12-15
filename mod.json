@@ -1,7 +1,7 @@
 {
     "Name": "Gazyi.MultiLanguageStrings",
     "Description": "Localization interface for custom server-side messages.",
-    "Version": "1.0.0",
+    "Version": "1.0.1",
     "LoadPriority": 1,
     "ConVars": 
     [
